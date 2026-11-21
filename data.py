@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import io
 import os
+from datetime import date
 from typing import Final
 
 import numpy as np
@@ -11,8 +13,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 START_DATE: Final[str] = "2000-01-01"
-DATA_CUTOFF: Final[str] = "2026-08-31"
+DATA_CUTOFF: Final[str] = os.getenv("FRED_DATA_CUTOFF", date.today().isoformat())
 FRED_URL: Final[str] = "https://api.stlouisfed.org/fred/series/observations"
+FRED_CSV_URL: Final[str] = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 
 # Deliberately small, economically motivated variable universe.
 SERIES = {
@@ -62,12 +65,7 @@ SERIES = {
 
 
 def _api_key() -> str:
-    key = os.getenv("FRED_API_KEY", "").strip()
-    if not key:
-        raise RuntimeError(
-            "FRED_API_KEY is missing. Add it to Streamlit Secrets or .env."
-        )
-    return key
+    return os.getenv("FRED_API_KEY", "").strip()
 
 
 def _monthly_last(series: pd.Series) -> pd.Series:
@@ -77,8 +75,28 @@ def _monthly_last(series: pd.Series) -> pd.Series:
 
 
 def fetch_series(series_id: str) -> pd.Series:
+    key = _api_key()
+    if not key:
+        response = requests.get(
+            FRED_CSV_URL,
+            params={"id": series_id, "cosd": START_DATE, "coed": DATA_CUTOFF},
+            timeout=30,
+        )
+        response.raise_for_status()
+        frame = pd.read_csv(io.StringIO(response.text))
+        if frame.empty or len(frame.columns) < 2:
+            raise RuntimeError(f"No observations returned for FRED series {series_id}.")
+        frame.columns = ["date", "value", *list(frame.columns[2:])]
+        frame["date"] = pd.to_datetime(frame["date"], errors="coerce")
+        frame["value"] = pd.to_numeric(frame["value"], errors="coerce")
+        return (
+            frame.dropna(subset=["date", "value"])
+            .set_index("date")["value"]
+            .sort_index()
+        )
+
     params = {
-        "api_key": _api_key(),
+        "api_key": key,
         "file_type": "json",
         "series_id": series_id,
         "observation_start": START_DATE,

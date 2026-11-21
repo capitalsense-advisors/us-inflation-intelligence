@@ -19,7 +19,16 @@ The first version intentionally keeps the model universe small:
 Historical window:
 
 - Start: January 2000
-- Data vintage cutoff: 31 August 2026
+- Data cutoff: latest available observation (override with `FRED_DATA_CUTOFF` for reproducible vintages)
+
+## Daily RiskMode snapshot
+
+`generate_snapshot.py` creates `snapshot/macro-snapshot.json` for the separate
+RiskMode Macro Insights screen. The included GitHub Actions workflow checks for
+new FRED observations every day at 06:17 UTC, regenerates the model output, and
+commits the snapshot only when it changes. A FRED API key is recommended for
+vintage-aware production updates; the public FRED CSV endpoint is used as a
+zero-cost fallback.
 
 ## Run locally
 

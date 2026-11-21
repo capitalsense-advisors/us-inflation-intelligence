@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T20:45:55.327598+00:00",
+  "dataCutoff": "2026-11-22",
+  "latestObservation": "2026-10-01",
+  "status": "ready",
+  "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
+  "headline": {
+    "pce": 3.495578683778078,
+    "corePce": 2.9387016867848725,
+    "shelter": 3.537576896052297,
+    "pressureScore": 81,
+    "regime": "Stable",
+    "confidence": "High",
+    "forecast3m": 3.495578683778078,
+    "forecast6m": 3.495578683778078
+  },
+  "forecast": [
+    {
+      "date": "2026-11-01",
+      "estimate": 3.495578683778078,
+      "lower": 3.2750289750017423,
+      "upper": 3.7161283925544133
+    },
+    {
+      "date": "2026-12-01",
+      "estimate": 3.495578683778078,
+      "lower": 3.1836742944491476,
+      "upper": 3.807483073107008
+    },
+    {
+      "date": "2027-01-01",
+      "estimate": 3.495578683778078,
+      "lower": 3.113575382582945,
+      "upper": 3.8775819849732107
+    },
+    {
+      "date": "2027-02-01",
+      "estimate": 3.495578683778078,
+      "lower": 3.0544792662254063,
+      "upper": 3.9366781013307492
+    },
+    {
+      "date": "2027-03-01",
+      "estimate": 3.495578683778078,
+      "lower": 3.0024145425364095,
+      "upper": 3.988742825019746
+    },
+    {
+      "date": "2027-04-01",
+      "estimate": 3.495578683778078,
+      "lower": 2.9553444343566264,
+      "upper": 4.035812933199529
+    }
+  ],
+  "forecastMeta": {
+    "selectedModel": "Naive",
+    "brief": "The Naive approach expects PCE inflation to be 3.50% in three months and 3.50% in six months, versus the latest observed rate of 3.50%. The near-term direction is roughly unchanged, leaving the 3-month estimate +1.50 percentage points from the Federal Reserve's 2% objective. The current inflation environment is classified as stable, with a pressure score of 77/100. No model tested currently beats the naive 'no change' benchmark (0.27 MAE) on out-of-sample testing, so that benchmark is shown instead. The 3M interval is 3.11% to 3.88%, from temporal conformal calibration."
+  },
+  "transmission": {
+    "real_yield_10y": {
+      "id": "DFII10",
+      "label": "10Y real yield",
+      "unit": "%",
+      "value": 2.88,
+      "change3m": 0.43999999999999995,
+      "latestObservation": "2026-11-19"
+    },
+    "treasury_2y": {
+      "id": "DGS2",
+      "label": "2Y Treasury",
+      "unit": "%",
+      "value": 4.76,
+      "change3m": 0.41999999999999993,
+      "latestObservation": "2026-11-19"
+    },
+    "breakeven_10y": {
+      "id": "T10YIE",
+      "label": "10Y breakeven",
+      "unit": "%",
+      "value": 2.15,
+      "change3m": -0.16000000000000014,
+      "latestObservation": "2026-11-20"
+    },
+    "broad_dollar": {
+      "id": "DTWEXBGS",
+      "label": "Broad US dollar",
+      "unit": "index",
+      "value": 122.6503,
+      "change3m": 3.443090414859329,
+      "latestObservation": "2026-11-13"
+    },
+    "fed_balance_sheet": {
+      "id": "WALCL",
+      "label": "Fed balance sheet",
+      "unit": "USD millions",
+      "value": 6741452.0,
+      "change3m": 0.15659096419622376,
+      "latestObservation": "2026-11-18"
+    }
+  },
+  "assetContext": {
+    "gold": {
+      "tone": "restrictive",
+      "label": "Gold",
+      "score": -3,
+      "summary": "Real yields, the dollar and inflation expectations define the current backdrop."
+    },
+    "btc": {
+      "tone": "restrictive",
+      "label": "Bitcoin",
+      "score": -3,
+      "summary": "Real yields, front-end rates, the dollar and liquidity define the current backdrop."
+    },
+    "eth": {
+      "tone": "restrictive",
+      "label": "Ethereum",
+      "score": -3,
+      "summary": "Liquidity and risk appetite dominate, usually with higher beta than BTC."
+    }
+  },
+  "drivers": [
+    {
+      "feature": "Pce Inflation L1",
+      "impact": -0.18,
+      "direction": "down"
+    },
+    {
+      "feature": "Pce Inflation L6",
+      "impact": -0.1218,
+      "direction": "down"
+    },
+    {
+      "feature": "Core Pce Inflation L3",
+      "impact": 0.0879,
+      "direction": "up"
+    },
+    {
+      "feature": "Inflation Expectations L6",
+      "impact": -0.0636,
+      "direction": "down"
+    },
+    {
+      "feature": "Consumption Growth L12",
+      "impact": -0.062,
+      "direction": "down"
+    },
+    {
+      "feature": "Oil Yoy L6",
+      "impact": -0.0523,
+      "direction": "down"
+    },
+    {
+      "feature": "Core Pce Inflation L6",
+      "impact": 0.0519,
+      "direction": "up"
+    },
+    {
+      "feature": "Shelter Inflation L3",
+      "impact": 0.043,
+      "direction": "up"
+    }
+  ],
+  "diagnostics": [
+    {
+      "model": "Naive",
+      "weight": 0.4247175817253894,
+      "mae": 0.265
+    },
+    {
+      "model": "Ensemble",
+      "weight": 0,
+      "mae": 0.284
+    },
+    {
+      "model": "XGBoost",
+      "weight": 0.2988611126861488,
+      "mae": 0.377
+    },
+    {
+      "model": "SARIMAX",
+      "weight": 0.27642130558846184,
+      "mae": 0.408
+    }
+  ],
+  "diagnosticMeta": {
+    "coverage": [
+      {
+        "Target": "80%",
+        "Observed holdout coverage": "83.3%",
+        "Method": "Temporal conformal"
+      }
+    ]
+  },
+  "seriesStatus": [
+    {
+      "Variable": "PCE Price Index",
+      "FRED ID": "PCEPI",
+      "Source": "BEA",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "Core PCE Price Index",
+      "FRED ID": "PCEPILFE",
+      "Source": "BEA",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "CPI Shelter",
+      "FRED ID": "CUSR0000SAH1",
+      "Source": "BLS",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "Unemployment Rate",
+      "FRED ID": "UNRATE",
+      "Source": "BLS",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "Real Personal Consumption Expenditures",
+      "FRED ID": "DPCERA3M086SBEA",
+      "Source": "BEA",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "1-Year Inflation Expectations",
+      "FRED ID": "MICH",
+      "Source": "University of Michigan",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    },
+    {
+      "Variable": "WTI Crude Oil Price",
+      "FRED ID": "WTISPLC",
+      "Source": "EIA / FRED",
+      "Frequency": "Monthly",
+      "Latest": "2026-10"
+    }
+  ],
+  "disclaimer": "Macro context and model research only. Not an entry signal or investment advice."
+}
