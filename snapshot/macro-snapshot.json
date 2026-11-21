@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T20:45:55.327598+00:00",
-  "dataCutoff": "2026-11-22",
+  "generatedAt": "2026-11-21T20:48:44.065961+00:00",
+  "dataCutoff": "2026-11-21",
   "latestObservation": "2026-10-01",
   "status": "ready",
   "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
@@ -122,64 +122,64 @@
   "drivers": [
     {
       "feature": "Pce Inflation L1",
-      "impact": -0.18,
+      "impact": -0.2012,
       "direction": "down"
     },
     {
       "feature": "Pce Inflation L6",
-      "impact": -0.1218,
+      "impact": -0.1085,
       "direction": "down"
     },
     {
-      "feature": "Core Pce Inflation L3",
-      "impact": 0.0879,
-      "direction": "up"
-    },
-    {
       "feature": "Inflation Expectations L6",
-      "impact": -0.0636,
+      "impact": -0.0845,
       "direction": "down"
     },
     {
       "feature": "Consumption Growth L12",
-      "impact": -0.062,
+      "impact": -0.0676,
       "direction": "down"
     },
     {
-      "feature": "Oil Yoy L6",
-      "impact": -0.0523,
-      "direction": "down"
-    },
-    {
-      "feature": "Core Pce Inflation L6",
-      "impact": 0.0519,
+      "feature": "Core Pce Inflation L3",
+      "impact": 0.0661,
       "direction": "up"
     },
     {
       "feature": "Shelter Inflation L3",
-      "impact": 0.043,
+      "impact": 0.0628,
+      "direction": "up"
+    },
+    {
+      "feature": "Oil Yoy L6",
+      "impact": -0.0499,
+      "direction": "down"
+    },
+    {
+      "feature": "Core Pce Inflation L12",
+      "impact": 0.0466,
       "direction": "up"
     }
   ],
   "diagnostics": [
     {
       "model": "Naive",
-      "weight": 0.4247175817253894,
+      "weight": 0.42471859899569847,
       "mae": 0.265
     },
     {
       "model": "Ensemble",
       "weight": 0,
-      "mae": 0.284
+      "mae": 0.286
     },
     {
       "model": "XGBoost",
-      "weight": 0.2988611126861488,
+      "weight": 0.2988594274744279,
       "mae": 0.377
     },
     {
       "model": "SARIMAX",
-      "weight": 0.27642130558846184,
+      "weight": 0.2764219735298736,
       "mae": 0.408
     }
   ],
