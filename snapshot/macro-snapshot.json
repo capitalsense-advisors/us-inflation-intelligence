@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T20:48:44.065961+00:00",
-  "dataCutoff": "2026-11-21",
+  "generatedAt": "2026-11-22T14:41:26.789415+00:00",
+  "dataCutoff": "2026-11-22",
   "latestObservation": "2026-10-01",
   "status": "ready",
   "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
@@ -164,7 +164,7 @@
   "diagnostics": [
     {
       "model": "Naive",
-      "weight": 0.42471859899569847,
+      "weight": 0.4247186040458109,
       "mae": 0.265
     },
     {
@@ -174,12 +174,12 @@
     },
     {
       "model": "XGBoost",
-      "weight": 0.2988594274744279,
+      "weight": 0.29885943102801305,
       "mae": 0.377
     },
     {
       "model": "SARIMAX",
-      "weight": 0.2764219735298736,
+      "weight": 0.2764219649261761,
       "mae": 0.408
     }
   ],
