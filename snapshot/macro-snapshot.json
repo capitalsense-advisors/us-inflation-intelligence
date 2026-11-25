@@ -1,70 +1,70 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T17:53:48.521129+00:00",
-  "dataCutoff": "2026-11-24",
+  "generatedAt": "2026-11-25T17:20:50.740317+00:00",
+  "dataCutoff": "2026-11-25",
   "latestObservation": "2026-10-01",
   "status": "ready",
   "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
   "headline": {
-    "pce": 3.495578683778078,
-    "corePce": 2.9387016867848725,
+    "pce": 3.844588778464675,
+    "corePce": 3.26111744583808,
     "shelter": 3.537576896052297,
-    "pressureScore": 81,
-    "regime": "Stable",
+    "pressureScore": 86,
+    "regime": "Reflationary",
     "confidence": "High",
-    "forecast3m": 3.495578683778078,
-    "forecast6m": 3.495578683778078
+    "forecast3m": 3.844588778464675,
+    "forecast6m": 3.844588778464675
   },
   "forecast": [
     {
       "date": "2026-11-01",
-      "estimate": 3.495578683778078,
-      "lower": 3.2750289750017423,
-      "upper": 3.7161283925544133
+      "estimate": 3.844588778464675,
+      "lower": 3.620337379221873,
+      "upper": 4.068840177707477
     },
     {
       "date": "2026-12-01",
-      "estimate": 3.495578683778078,
-      "lower": 3.1836742944491476,
-      "upper": 3.807483073107008
+      "estimate": 3.844588778464675,
+      "lower": 3.527449408274361,
+      "upper": 4.161728148654989
     },
     {
       "date": "2027-01-01",
-      "estimate": 3.495578683778078,
-      "lower": 3.113575382582945,
-      "upper": 3.8775819849732107
+      "estimate": 3.844588778464675,
+      "lower": 3.456173961307729,
+      "upper": 4.2330035956216205
     },
     {
       "date": "2027-02-01",
-      "estimate": 3.495578683778078,
-      "lower": 3.0544792662254063,
-      "upper": 3.9366781013307492
+      "estimate": 3.844588778464675,
+      "lower": 3.396085979979071,
+      "upper": 4.293091576950278
     },
     {
       "date": "2027-03-01",
-      "estimate": 3.495578683778078,
-      "lower": 3.0024145425364095,
-      "upper": 3.988742825019746
+      "estimate": 3.844588778464675,
+      "lower": 3.343147405708325,
+      "upper": 4.346030151221025
     },
     {
       "date": "2027-04-01",
-      "estimate": 3.495578683778078,
-      "lower": 2.9553444343566264,
-      "upper": 4.035812933199529
+      "estimate": 3.844588778464675,
+      "lower": 3.295287276214656,
+      "upper": 4.393890280714693
     }
   ],
   "forecastMeta": {
     "selectedModel": "Naive",
-    "brief": "The Naive approach expects PCE inflation to be 3.50% in three months and 3.50% in six months, versus the latest observed rate of 3.50%. The near-term direction is roughly unchanged, leaving the 3-month estimate +1.50 percentage points from the Federal Reserve's 2% objective. The current inflation environment is classified as stable, with a pressure score of 77/100. No model tested currently beats the naive 'no change' benchmark (0.27 MAE) on out-of-sample testing, so that benchmark is shown instead. The 3M interval is 3.11% to 3.88%, from temporal conformal calibration."
+    "brief": "The Naive approach expects PCE inflation to be 3.84% in three months and 3.84% in six months, versus the latest observed rate of 3.84%. The near-term direction is roughly unchanged, leaving the 3-month estimate +1.84 percentage points from the Federal Reserve's 2% objective. The current inflation environment is classified as reflationary, with a pressure score of 85/100. No model tested currently beats the naive 'no change' benchmark (0.28 MAE) on out-of-sample testing, so that benchmark is shown instead. The 3M interval is 3.46% to 4.23%, from temporal conformal calibration."
   },
   "transmission": {
     "real_yield_10y": {
       "id": "DFII10",
       "label": "10Y real yield",
       "unit": "%",
-      "value": 2.77,
-      "change3m": 0.33000000000000007,
-      "latestObservation": "2026-11-20"
+      "value": 2.79,
+      "change3m": 0.3500000000000001,
+      "latestObservation": "2026-11-23"
     },
     "treasury_2y": {
       "id": "DGS2",
@@ -72,15 +72,15 @@
       "unit": "%",
       "value": 4.63,
       "change3m": 0.29000000000000004,
-      "latestObservation": "2026-11-20"
+      "latestObservation": "2026-11-23"
     },
     "breakeven_10y": {
       "id": "T10YIE",
       "label": "10Y breakeven",
       "unit": "%",
-      "value": 2.13,
-      "change3m": -0.18000000000000016,
-      "latestObservation": "2026-11-23"
+      "value": 2.12,
+      "change3m": -0.18999999999999995,
+      "latestObservation": "2026-11-24"
     },
     "broad_dollar": {
       "id": "DTWEXBGS",
@@ -122,72 +122,72 @@
   "drivers": [
     {
       "feature": "Pce Inflation L1",
-      "impact": -0.2012,
+      "impact": -0.1705,
       "direction": "down"
     },
     {
       "feature": "Pce Inflation L6",
-      "impact": -0.1085,
-      "direction": "down"
-    },
-    {
-      "feature": "Inflation Expectations L6",
-      "impact": -0.0845,
-      "direction": "down"
-    },
-    {
-      "feature": "Consumption Growth L12",
-      "impact": -0.0676,
+      "impact": -0.1216,
       "direction": "down"
     },
     {
       "feature": "Core Pce Inflation L3",
-      "impact": 0.0661,
+      "impact": 0.0775,
       "direction": "up"
     },
     {
+      "feature": "Inflation Expectations L6",
+      "impact": -0.0705,
+      "direction": "down"
+    },
+    {
+      "feature": "Consumption Growth L12",
+      "impact": -0.0563,
+      "direction": "down"
+    },
+    {
       "feature": "Shelter Inflation L3",
-      "impact": 0.0628,
+      "impact": 0.05,
       "direction": "up"
     },
     {
       "feature": "Oil Yoy L6",
-      "impact": -0.0499,
+      "impact": -0.0486,
       "direction": "down"
     },
     {
-      "feature": "Core Pce Inflation L12",
-      "impact": 0.0466,
+      "feature": "Core Pce Inflation L1",
+      "impact": 0.0478,
       "direction": "up"
     }
   ],
   "diagnostics": [
     {
       "model": "Naive",
-      "weight": 0.42471859899569847,
-      "mae": 0.265
+      "weight": 0.42069465545669504,
+      "mae": 0.275
     },
     {
       "model": "Ensemble",
       "weight": 0,
-      "mae": 0.286
+      "mae": 0.297
     },
     {
       "model": "XGBoost",
-      "weight": 0.2988594274744279,
-      "mae": 0.377
+      "weight": 0.3022905421257987,
+      "mae": 0.383
     },
     {
       "model": "SARIMAX",
-      "weight": 0.2764219735298736,
-      "mae": 0.408
+      "weight": 0.27701480241750615,
+      "mae": 0.418
     }
   ],
   "diagnosticMeta": {
     "coverage": [
       {
         "Target": "80%",
-        "Observed holdout coverage": "83.3%",
+        "Observed holdout coverage": "77.8%",
         "Method": "Temporal conformal"
       }
     ]
