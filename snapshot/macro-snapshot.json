@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T17:20:50.740317+00:00",
-  "dataCutoff": "2026-11-25",
+  "generatedAt": "2026-11-26T17:00:41.580035+00:00",
+  "dataCutoff": "2026-11-26",
   "latestObservation": "2026-10-01",
   "status": "ready",
   "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
@@ -64,7 +64,7 @@
       "unit": "%",
       "value": 2.79,
       "change3m": 0.3500000000000001,
-      "latestObservation": "2026-11-23"
+      "latestObservation": "2026-11-24"
     },
     "treasury_2y": {
       "id": "DGS2",
@@ -72,7 +72,7 @@
       "unit": "%",
       "value": 4.63,
       "change3m": 0.29000000000000004,
-      "latestObservation": "2026-11-23"
+      "latestObservation": "2026-11-24"
     },
     "breakeven_10y": {
       "id": "T10YIE",
@@ -80,7 +80,7 @@
       "unit": "%",
       "value": 2.12,
       "change3m": -0.18999999999999995,
-      "latestObservation": "2026-11-24"
+      "latestObservation": "2026-11-25"
     },
     "broad_dollar": {
       "id": "DTWEXBGS",
