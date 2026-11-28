@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T16:46:00.809526+00:00",
-  "dataCutoff": "2026-11-27",
+  "generatedAt": "2026-11-28T15:38:40.314492+00:00",
+  "dataCutoff": "2026-11-28",
   "latestObservation": "2026-10-01",
   "status": "ready",
   "source": "FRED \u00b7 BEA \u00b7 BLS \u00b7 EIA \u00b7 University of Michigan",
@@ -62,25 +62,25 @@
       "id": "DFII10",
       "label": "10Y real yield",
       "unit": "%",
-      "value": 2.79,
-      "change3m": 0.3500000000000001,
-      "latestObservation": "2026-11-24"
+      "value": 2.73,
+      "change3m": 0.29000000000000004,
+      "latestObservation": "2026-11-25"
     },
     "treasury_2y": {
       "id": "DGS2",
       "label": "2Y Treasury",
       "unit": "%",
-      "value": 4.63,
-      "change3m": 0.29000000000000004,
-      "latestObservation": "2026-11-24"
+      "value": 4.61,
+      "change3m": 0.27000000000000046,
+      "latestObservation": "2026-11-25"
     },
     "breakeven_10y": {
       "id": "T10YIE",
       "label": "10Y breakeven",
       "unit": "%",
-      "value": 2.12,
-      "change3m": -0.18999999999999995,
-      "latestObservation": "2026-11-25"
+      "value": 2.15,
+      "change3m": -0.16000000000000014,
+      "latestObservation": "2026-11-27"
     },
     "broad_dollar": {
       "id": "DTWEXBGS",
@@ -94,9 +94,9 @@
       "id": "WALCL",
       "label": "Fed balance sheet",
       "unit": "USD millions",
-      "value": 6741452.0,
-      "change3m": 0.15659096419622376,
-      "latestObservation": "2026-11-18"
+      "value": 6732044.0,
+      "change3m": 0.016817928981982533,
+      "latestObservation": "2026-11-25"
     }
   },
   "assetContext": {
@@ -164,7 +164,7 @@
   "diagnostics": [
     {
       "model": "Naive",
-      "weight": 0.42069465545669504,
+      "weight": 0.42069466034360975,
       "mae": 0.275
     },
     {
@@ -174,12 +174,12 @@
     },
     {
       "model": "XGBoost",
-      "weight": 0.3022905421257987,
+      "weight": 0.3022905456372959,
       "mae": 0.383
     },
     {
       "model": "SARIMAX",
-      "weight": 0.27701480241750615,
+      "weight": 0.2770147940190943,
       "mae": 0.418
     }
   ],
